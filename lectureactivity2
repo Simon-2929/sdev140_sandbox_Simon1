@@ -1,0 +1,20 @@
+#Goals
+    #a program that reads intergers until the user eners 0
+    #prints the count of numbers entered
+    #Prints the maximum number entered  
+
+#user_input to allow users to input numbers
+user_input = input('>').strip()
+#number_list to hold inputs as a list
+number_list = []
+#while  the user does not input 0 and then if the user input is numeric then the input is assigned to integer number then added to the list
+while user_input != '0' :
+    if user_input.isnumeric():
+            number = int(user_input)
+            number_list.append(number)
+    
+    user_input = input('>').strip()
+
+max_number = max(number_list)
+print("Maximum Number:", max_number)
+print("Count of numbers entered: ", len(number_list))
